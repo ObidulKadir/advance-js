@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this keyword</title>
+</head>
+<body>
+    <h1>this </h1>
+    <p onclick="this.innerText=`you click`">dont click</p>
+    <script>
+        const personInfo ={
+            firstName:'kadir',
+            lastName : 'riz',
+            getFull: function(){
+                console.log(this);
+                return this.firstName + this.lastName
+            }
+
+        }
+        console.log(personInfo)
+        console.log(personInfo.getFull())
+        const anotherObject = {
+            firstName:'kadir',
+            lastName : 'ahamed',
+        }
+        anotherObject.getFull = personInfo.getFull;
+        console.log(anotherObject.getFull)
+        console.log(anotherObject.getFull())
+
+
+        function add (a,b){
+            console.log(this);// result would be window
+            return a+ b;
+        }
+        add(1,1)
+        //kon contxt function ormethod  ta run hosse  seta dea e exceution context ta  kih.
+        //dot ar left side a k ase setar upor depend kore
+        
+    </script>
+</body>
+</html>
