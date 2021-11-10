@@ -8,7 +8,7 @@ console.log(number)
 
 // let num = 19
 // var num =  20
-// console.log(num) // same for let and var
+// console.log(num) // same for let and varz
 
 const wifi = "icc "
 //const wifi = "gunchil" // const is means constant which is unchange able
